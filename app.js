@@ -14,10 +14,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   timeSelect.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      if (!audioElement.paused) {
+        audioElement.pause();
+        play.src = '/assets/svg/play.svg';
+      }
       playTime = +e.target.dataset.time;
       displayTimer.textContent = `${playTime / 60}:00`;
       audioElement.currentTime = 0;
-      checkPlaying(audioElement);
     });
   });
 
