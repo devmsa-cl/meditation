@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Mediation</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <body>
+      <audio
+        loop
+        src="/assets/JEK9DZZ-the-meditation.mp3"
+        controls
+        id="audioElement"
+      ></audio>
+      <h1 class="title">Mediatation</h1>
+      <div class="container">
+        <div class="time-select">
+          <button data-time="60">1 minute</button>
+          <button data-time="180">3 minute</button>
+          <button data-time="300">5 minute</button>
+          <button data-time="600">10 minute</button>
+        </div>
+        <div class="player-container">
+          <span class="time-display">3:00</span>
+          <div class="progress">
+            <svg
+              width="453"
+              height="453"
+              viewBox="0 0 453 453"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="226.5"
+                cy="226.5"
+                r="160"
+                stroke="white"
+                stroke-width="40"
+              />
+            </svg>
+            <svg
+              class="outline-track"
+              width="453"
+              height="453"
+              viewBox="0 0 453 453"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="226.5"
+                cy="226.5"
+                r="160"
+                stroke="#4aa2ff"
+                stroke-width="40"
+              />
+            </svg>
+            <img src="/assets/svg/play.svg" alt="play" class="play" />
+          </div>
+        </div>
+      </div>
+    </body>
+  </body>
+</html>
