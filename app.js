@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   outline.style.strokeDashoffset = outlineLength;
   outline.style.strokeDasharray = outlineLength;
 
-  let playTime = 5;
+  let playTime = 30;
 
   timeSelect.forEach((btn) => {
     btn.addEventListener('click', (e) => {
