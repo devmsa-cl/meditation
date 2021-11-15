@@ -32,20 +32,49 @@ window.addEventListener("DOMContentLoaded", () => {
       currentBackground = e.target.dataset.bg;
       audioElement.src = "/assets/" + currentSong;
       resetOutline();
-      setBackground();
+      setBackground(String(e.target.textContent).trim().toLowerCase());
     });
   });
 
   function removeActiveClass() {
     tracks.forEach((track) => track.classList.remove("active"));
   }
-  function setBackground() {
+  function setBackground(track) {
     const bodyElement = document.querySelector("body");
     bodyElement.style.backgroundImage = `url(/assets/${currentBackground})`;
+    let primary, secondary, hover, active;
 
-    console.log(
-      window.getComputedStyle(bodyElement).getPropertyValue("--main-color")
-    );
+    switch (track) {
+      case "track 1":
+        primary =
+          getComputedStyle(bodyElement).getPropertyValue("--track1-color-1");
+        secondary =
+          getComputedStyle(bodyElement).getPropertyValue("--track1-color-2");
+        hover =
+          getComputedStyle(bodyElement).getPropertyValue("--track1-color-3");
+
+        active =
+          getComputedStyle(bodyElement).getPropertyValue("--track1-color-4");
+
+        break;
+
+      case "track 2":
+        primary =
+          getComputedStyle(bodyElement).getPropertyValue("--track2-color-1");
+        secondary =
+          getComputedStyle(bodyElement).getPropertyValue("--track2-color-2");
+        hover =
+          getComputedStyle(bodyElement).getPropertyValue("--track2-color-3");
+        active =
+          getComputedStyle(bodyElement).getPropertyValue("--track2-color-4");
+        break;
+    }
+
+    bodyElement.style.setProperty("--main-primary", primary);
+    bodyElement.style.setProperty("--main-secondary", secondary);
+    bodyElement.style.setProperty("--hover", hover);
+    bodyElement.style.setProperty("--active", active);
+    outline.setAttribute("stroke", primary);
   }
   function resetOutline() {
     outline.style.strokeDashoffset = outlineLength;
