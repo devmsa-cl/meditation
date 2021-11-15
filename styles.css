@@ -8,10 +8,20 @@
 }
 
 :root {
-  --track1: hsl(204, 79%, 37%);
-  --track2: hsl(25deg 100% 56%);
+  --track1-color-1: hsl(204, 79%, 37%);
+  --track1-color-2: hsl(211, 100%, 19%);
+  --track1-color-3: hsl(211, 100%, 13%);
+  --track1-color-4: hsl(211, 100%, 29%);
 
-  --main-color: var(--track1);
+  --track2-color-1: hsl(25deg 100% 56%);
+  --track2-color-2: hsl(25deg 100% 38%);
+  --track2-color-3: hsl(25deg 100% 32%);
+  --track2-color-4: hsl(25deg 100% 48%);
+
+  --main-primary: var(--track1-color-1);
+  --main-secondary: var(--track1-color-2);
+  --hover: var(--track1-color-3);
+  --active: var(--track1-color-4);
 }
 
 body {
@@ -31,7 +41,7 @@ body {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--main-color);
+  color: var(--main-primary);
   letter-spacing: 5px;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 80%);
 }
@@ -68,7 +78,7 @@ audio {
   justify-content: center;
 }
 .song-select button.active {
-  background-color: hsl(211, 100%, 29%);
+  background-color: var(--active);
 }
 .time-select {
   display: flex;
@@ -83,7 +93,7 @@ audio {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2rem;
   padding: 0.4rem 0.8rem;
-  background-color: hsl(211, 100%, 19%);
+  background-color: var(--main-secondary);
   margin-top: 0.5em;
   color: rgb(214, 213, 213);
   border: none;
@@ -92,7 +102,7 @@ audio {
 }
 
 .time-select button:hover {
-  background-color: hsl(211, 100%, 13%);
+  background-color: var(--hover);
 }
 
 .player-container {
