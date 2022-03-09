@@ -79,7 +79,8 @@ audio {
   align-items: center;
   justify-content: center;
 }
-.song-select button.active {
+.song-select button.active,
+.time-select button.active {
   background-color: var(--active);
 }
 .time-select {
