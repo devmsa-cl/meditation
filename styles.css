@@ -64,6 +64,7 @@ audio {
   top: 80%;
   left: 50%;
   display: flex;
+  align-items: center;
   transform: translate(-50%, -50%);
 }
 .time-select,
@@ -84,7 +85,6 @@ audio {
 .time-select {
   display: flex;
   flex-direction: column;
-  margin-top: 3.5rem;
 }
 
 .time-select button,
@@ -145,7 +145,7 @@ audio {
     padding: 0 1rem;
   }
   .time-display {
-    top: 15%;
+    top: -170%;
     flex: 1;
   }
   .progress {
@@ -164,5 +164,9 @@ audio {
   }
   .player-container {
     flex: 1;
+  }
+  .time-select button,
+  .song-select button {
+    font-size: 0.9rem;
   }
 }
