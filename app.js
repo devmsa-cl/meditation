@@ -1,10 +1,12 @@
+import songs from './track.js';
+
 window.addEventListener('DOMContentLoaded', () => {
   const audioElement = document.querySelector('#audioElement');
   const play = document.querySelector('.play');
   const timeSelect = document.querySelectorAll('.time-select button');
   const outline = document.querySelector('.outline-track circle');
   const displayTimer = document.querySelector('.time-display');
-  const tracks = [...document.querySelectorAll('.song-select button')];
+  let tracks;
 
   const outlineLength = outline.getTotalLength();
 
@@ -15,6 +17,20 @@ window.addEventListener('DOMContentLoaded', () => {
   let currentBackground =
     '143160-wallpaper-buddha-buddhism-meditation-harmony-silhouette-hd.jpg';
   let currentSong = 'JEK9DZZ-the-meditation.mp3';
+
+  // render song
+  (() => {
+    const selectContainer = document.querySelector('.song-select');
+    selectContainer.innerHTML = '';
+    songs.forEach((song, i) => {
+      const button = document.createElement('button');
+      button.textContent = 'track ' + (i + 1);
+      button.setAttribute('data-song', song.path);
+      button.setAttribute('data-bg', song.background_image);
+      selectContainer.appendChild(button);
+    });
+    tracks = [...document.querySelectorAll('.song-select button')];
+  })();
 
   //Change track
   tracks.forEach((track) => {
@@ -72,6 +88,17 @@ window.addEventListener('DOMContentLoaded', () => {
           getComputedStyle(bodyElement).getPropertyValue('--track2-color-3');
         active =
           getComputedStyle(bodyElement).getPropertyValue('--track2-color-4');
+        break;
+
+      case 'track 3':
+        primary =
+          getComputedStyle(bodyElement).getPropertyValue('--track3-color-1');
+        secondary =
+          getComputedStyle(bodyElement).getPropertyValue('--track3-color-2');
+        hover =
+          getComputedStyle(bodyElement).getPropertyValue('--track3-color-3');
+        active =
+          getComputedStyle(bodyElement).getPropertyValue('--track3-color-4');
         break;
     }
 
