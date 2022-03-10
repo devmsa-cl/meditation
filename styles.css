@@ -18,6 +18,11 @@
   --track2-color-3: hsl(25deg 100% 32%);
   --track2-color-4: hsl(25deg 100% 48%);
 
+  --track3-color-1: hsl(0, 7%, 81%);
+  --track3-color-2: hsla(0, 0%, 100%, 0.078);
+  --track3-color-3: hsla(0, 0%, 100%, 0.281);
+  --track3-color-4: hsla(0, 0%, 100%, 0.521);
+
   --main-primary: var(--track1-color-1);
   --main-secondary: var(--track1-color-2);
   --hover: var(--track1-color-3);
