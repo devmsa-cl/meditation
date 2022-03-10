@@ -1,4 +1,4 @@
-export default track = [
+const songs = [
   {
     id: 1,
     path: 'JEK9DZZ-the-meditation.mp3',
@@ -10,4 +10,11 @@ export default track = [
     path: 'melody-of-nature-main-6672.mp3',
     background_image: 'Y7isDB.jpg',
   },
+  {
+    id: 3,
+    path: 'Light-Of-Yours-Atmosphere-For-The-Inner-Child.mp3',
+    background_image: 'image-asset.jpeg',
+  },
 ];
+
+export default songs;
